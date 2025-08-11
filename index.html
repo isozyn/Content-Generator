@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Content Generator</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 AI Content Generator</h1>
+            <p>Generate amazing text, code, and images with AI</p>
+        </div>
+
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="switchSection('text')">📝 Text</button>
+            <button class="nav-tab" onclick="switchSection('code')">💻 Code</button>
+            <button class="nav-tab" onclick="switchSection('image')">🖼️ Image</button>
+        </div>
+
+        <!-- Text Generator Section -->
+        <div id="text-section" class="content-section active">
+            <div class="generator-card">
+                <h2>✨ Text Generator</h2>
+                <div class="input-group">
+                    <label for="text-prompt">Enter your prompt:</label>
+                    <textarea id="text-prompt" class="input-field" rows="4" placeholder="Describe what you want to generate..."></textarea>
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="generateText()">🎯 Generate Text</button>
+                    <button class="btn btn-secondary" onclick="generatePrompt('text')">💡 Generate Prompt</button>
+                </div>
+            </div>
+            <div id="text-results"></div>
+        </div>
+
+        <!-- Code Generator Section -->
+        <div id="code-section" class="content-section">
+            <div class="generator-card">
+                <h2>⚡ Code Generator</h2>
+                <div class="input-group">
+                    <label for="code-prompt">Enter your code request:</label>
+                    <textarea id="code-prompt" class="input-field" rows="4" placeholder="Describe the code you want to generate..."></textarea>
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="generateCode()">🔨 Generate Code</button>
+                    <button class="btn btn-secondary" onclick="generatePrompt('code')">💡 Generate Prompt</button>
+                </div>
+            </div>
+            <div id="code-results"></div>
+        </div>
+
+        <!-- Image Generator Section -->
+        <div id="image-section" class="content-section">
+            <div class="generator-card">
+                <h2>🎨 Image Generator</h2>
+                <div class="input-group">
+                    <label for="image-prompt">Enter your image description:</label>
+                    <textarea id="image-prompt" class="input-field" rows="4" placeholder="Describe the image you want to generate..."></textarea>
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="generateImage()">🎨 Generate Image</button>
+                    <button class="btn btn-secondary" onclick="generatePrompt('image')">💡 Generate Prompt</button>
+                </div>
+            </div>
+            <div id="image-results"></div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="src/script.js"></script>
+</body>
+</html>
