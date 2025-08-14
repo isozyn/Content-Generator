@@ -80,6 +80,18 @@ body {
     opacity: 1;
     transform: translateY(0);
     display: block;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .generator-card {
@@ -109,6 +121,7 @@ body {
     font-size: 1rem;
     transition: all 0.3s ease;
     resize: vertical;
+    font-family: inherit;
 }
 
 .input-field:focus {
@@ -164,6 +177,18 @@ body {
     padding: 20px;
     margin-top: 20px;
     border-left: 4px solid #667eea;
+    animation: slideInUp 0.5s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .result-card h3 {
@@ -180,6 +205,7 @@ body {
     white-space: pre-wrap;
     overflow-x: auto;
     position: relative;
+    line-height: 1.5;
 }
 
 .image-result {
@@ -191,6 +217,7 @@ body {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    margin-bottom: 15px;
 }
 
 .loading-overlay {
@@ -211,5 +238,82 @@ body {
 
 .loading-overlay.active {
     opacity: 1;
+    visibility: visible;
+}
 
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Download buttons styling */
+.download-btn {
+    background: #28a745;
+    color: white;
+    margin-top: 10px;
+}
+
+.download-btn:hover {
+    background: #218838;
+}
+
+.popup-preview {
+    background: #17a2b8;
+    color: white;
+}
+
+.popup-preview:hover {
+    background: #138496;
+}
+
+.regenerate-btn {
+    background: #ffc107;
+    color: #212529;
+}
+
+.regenerate-btn:hover {
+    background: #e0a800;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .nav-tabs {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .nav-tab {
+        margin: 5px 0;
+        width: 100%;
+    }
+    
+    .generator-card {
+        padding: 20px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
 }
