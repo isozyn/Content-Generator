@@ -1,5 +1,5 @@
 // API Configuration
-const GEMINI_API_KEY = 'AIzaSyAVR00kvKzPttIhDnyDcX9E4K6uxuNIg-w';
+const GEMINI_API_KEY = 'AIzaSyDufEQ5FxQIDpBTFJNsO1M8LoDZ8979Zmw';
 const STABILITY_API_KEY = 'sk-HYjAASQRltDmaWaOSKUK5SoPMtwBDUbGJ2EmuxcYJKSKHpKw';
 
 // Section switching functionality
